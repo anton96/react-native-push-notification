@@ -579,7 +579,7 @@ public class RNPushNotificationHelper {
         // bug fix related to NotificationChannel in android 8.1, API 26
         NotificationChannel mChannel = manager.getNotificationChannel(NOTIFICATION_CHANNEL_ID);
         if (mChannel == null) {
-            mChannel = new NotificationChannel(NOTIFICATION_CHANNEL_ID, this.config.getChannelName(), NotificationManager.IMPORTANCE_MAX);
+            mChannel = new NotificationChannel(NOTIFICATION_CHANNEL_ID, this.config.getChannelName(), NotificationManager.IMPORTANCE_HIGH);
             mChannel.setDescription(this.config.getChannelDescription());
             mChannel.enableVibration(true);
             mChannel.setVibrationPattern(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
